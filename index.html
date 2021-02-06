@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Application</h1>
+        <div class = "">
+            <h4>Score:</h4>
+            <h5 id="countdown"></h5>
+            <button onClick = "showScores(event)" type="button" class="btn btn-dark float-end">Scores</button>
+            <button onClick = "startQuiz(event)" type="button" class="btn btn-dark float-end">Start Quiz</button>
+        </div>
+        <div id = "quizPage" class = "card">
+            <form id="questionCard" class = "card-body">Click Start to Begin</form>
+            <div id="initialBox" class="input-group input-group-sm mb-3 d-none">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Please Enter Your Initials</span>
+                <input type="text" id = "initials" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <button type="button" class="btn btn-primary" onclick="submitButton(event)">Submit Score</button>
+            </div>
+            <div id="scorePage" class="container d-none">
+                <h3 style="font-weight:bold;">Scores</h3>
+                <p id="recentScore" ></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./Assets/script.js"></script>
+</html>
